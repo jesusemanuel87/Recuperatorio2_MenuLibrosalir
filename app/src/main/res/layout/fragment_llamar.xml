@@ -34,7 +34,7 @@
         android:layout_marginBottom="523dp"
         android:ems="10"
         android:hint="@string/etTelefono"
-        android:inputType="number"
+        android:inputType="phone"
         android:textColorHint="#8D6E63"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
