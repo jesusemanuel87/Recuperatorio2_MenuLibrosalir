@@ -25,14 +25,14 @@ public class LlamarFragment extends Fragment {
 
         mv.getMensajeError().observe(getViewLifecycleOwner(), s -> binding.tvLlamar.setText(s));
 
-        //binding.btLlamar.setOnClickListener(view -> mv.llamar(binding.etTelefono.getText().toString()));
+        binding.btLlamar.setOnClickListener(view -> mv.llamar(binding.etTelefono.getText().toString()));
 
-        binding.btLlamar.setOnClickListener(new View.OnClickListener() {
+       /* binding.btLlamar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mv.llamar(binding.etTelefono.getText().toString());
             }
-        });
+        });*/
         return root;
     }
 

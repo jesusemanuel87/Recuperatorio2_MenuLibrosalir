@@ -55,11 +55,13 @@
         android:gravity="center"
         android:text="@string/bt_Llamar"
         android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_call"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etTelefono"
         tools:ignore="DuplicateSpeakableTextCheck" />
+
     <TextView
         android:id="@+id/tvMensaje"
         android:layout_width="match_parent"
