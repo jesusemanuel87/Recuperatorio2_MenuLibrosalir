@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_llamar">
+
+    <fragment
+        android:id="@+id/nav_llamar"
+        android:name="com.example.tp04_login_with_navigation.ui.llamar.LlamarFragment"
+        android:label="@string/menu_llamar"
+        tools:layout="@layout/fragment_llamar" />
+
+    <fragment
+        android:id="@+id/nav_foto"
+        android:name="com.example.tp04_login_with_navigation.ui.foto.FotoFragment"
+        android:label="@string/menu_foto"
+        tools:layout="@layout/fragment_foto" />
+
+    <fragment
+        android:id="@+id/nav_salir"
+        android:name="com.example.tp04_login_with_navigation.ui.salir.SalirFragment"
+        android:label="@string/menu_salir"
+        tools:layout="@layout/fragment_salir" />
+</navigation>
