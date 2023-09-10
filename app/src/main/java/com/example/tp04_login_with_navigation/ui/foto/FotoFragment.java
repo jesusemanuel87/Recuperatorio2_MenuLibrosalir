@@ -24,7 +24,7 @@ public class FotoFragment extends Fragment {
         binding = FragmentFotoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        binding.imFoto.setImageResource(R.drawable.avatar1);
+        //binding.imFoto.setImageResource(R.drawable.avatar1);
         return root;
     }
 
