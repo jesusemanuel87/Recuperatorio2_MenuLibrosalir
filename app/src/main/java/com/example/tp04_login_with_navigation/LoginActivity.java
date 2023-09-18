@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.tp04_login_with_navigation.databinding.ActivityLoginBinding;
@@ -25,14 +27,20 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         mv = new ViewModelProvider(this).get(LoginActivityViewModel.class);
 
-        binding.btLogin.setOnClickListener(v -> {
-            String username = binding.edUser.getText().toString();
-            String password = binding.edPass.getText().toString();
+        binding.btLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                mv.Login(
+                        binding.edUser.getText().toString(),
+                        binding.edPass.getText().toString()
+                );
+            }
+        });
 
-            if (mv.isValidCredentials(username,password)) {
-                navigateToMain();
-            } else {
-                Toast.makeText(LoginActivity.this, "Usuario y/o clave incorrecta", Toast.LENGTH_SHORT).show();
+        mv.getMutable().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                Toast.makeText(LoginActivity.this, s, Toast.LENGTH_SHORT).show();
             }
         });
 
