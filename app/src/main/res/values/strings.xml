@@ -20,4 +20,13 @@
     <string name="tv_llamar">Llamar</string>
     <string name="tvFoto">Mi Foto</string>
     <string name="foto">Mi foto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tvTitulo">Titulo</string>
+    <string name="tvAutor">Autor</string>
+    <string name="menu_libros">Libros</string>
+    <string name="tvEditorial">Editorial</string>
+    <string name="tvAño">Año</string>
+    <string name="tvAnio">Año</string>
+    <string name="detalles_fragment">Detalles del Libro</string>
 </resources>

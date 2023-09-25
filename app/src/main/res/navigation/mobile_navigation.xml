@@ -3,13 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_llamar">
+    app:startDestination="@+id/nav_libros">
 
     <fragment
-        android:id="@+id/nav_llamar"
-        android:name="com.example.tp04_login_with_navigation.ui.llamar.LlamarFragment"
-        android:label="@string/menu_llamar"
-        tools:layout="@layout/fragment_llamar" />
+        android:id="@+id/nav_libros"
+        android:name="com.example.tp04_login_with_navigation.ui.libros.LibrosFragment"
+        android:label="@string/menu_libros"
+        tools:layout="@layout/fragment_libros">
+        <action
+            android:id="@+id/action_nav_libros_to_nav_detalleLibros"
+            app:destination="@id/nav_detalleLibros" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_detalleLibros"
+        android:name="com.example.tp04_login_with_navigation.ui.libros.DetalleLibros"
+        android:label="@string/detalles_fragment"
+        tools:layout="@layout/fragment_detalle_libros" >
+        <action
+            android:id="@+id/action_detalleLibros_to_nav_libros"
+            app:destination="@id/nav_libros" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_foto"
